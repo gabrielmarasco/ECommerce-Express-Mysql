@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <header class="header">
+        <div class="navbar">
+
+          <% if (locals.invitado) {%> 
+          <img class="avatar" src="/img/users/<%=locals.usuario.avatar %> " alt="">
+          <% } else{%> 
+          <i class="fa-solid fa-user" style="color: aliceblue;"></i>
+          <% } %> 
+          <div>
+            
+           <a href="/users/profile"><h3 class="invitado">Hola, <%= locals.invitado ? locals.usuario.firstName: "invitado"  %>   </h3></a> </div>
+          <a class="full-logo" href="/"
+            ><img class="logo" src="/img/logo.png" /><img
+              class="goat"
+              src="/img/goat.png"
+          /></a>
+          <div class="search">
+            <form class="search-box" action="submit">
+              <input class="searcher" type="search" placeholder="Buscar GOAT" />
+              <button type="submit">
+                <i class="fa-solid fa-magnifying-glass glass-box"></i>
+              </button>
+            </form>
+            <button class="glass">
+              <i class="fa-solid fa-magnifying-glass glass"></i>
+            </button>
+          </div>
+          <div class="navbar-menu">
+            <ul>
+              <li><a href="/">SHOP</a></li>
+              <li><a href="/about">ABOUT US</a></li>
+              <li><a href="/users/log">LOGIN</a></li>
+            </ul>
+          </div>
+          <div class="cart-icon">
+            <a href="/cart"><i class="fa-solid fa-bag-shopping shopping"></i></a>
+          </div>
+          <div class="hamburger"><i class="fa-solid fa-bars burger"></i></div>
+        </div>
+      </header>
+</html>
